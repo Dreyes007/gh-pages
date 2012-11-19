@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- Daniel Reyes-->
+<!-- VFW-1210-->
+<!-- Project-4-->
+
+<!-- HTML TAG -->
+<html>
+	<!-- Document Head -->
+	<head>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="My first HTML of Visual Frameworks class" />
+        <meta name="keywords" content="html5, mobile development, full sail" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="user-scalable=no, width=device-width" />
+        <meta name="viewport" content="target-desintydpi=device-dpi" />
+        <meta name="HandheldFriendly" content="true">
+        <meta name="MobileOptimize" content="320"/>
+        <link rel="stylesheet" href="Style.css" type="text/css" />
+                
+        <title>Mobile Menu</title>                                     
+    </head>
+    <body>
+	    <h1>Mobile Menu</h1>
+	    <h2>Orders on the go!</h2>
+	    <nav>
+	    	<a href="#" id="clear">Clear Store Data</a>
+	    	<a href="#" id="displayLink">Display Data</a>
+	    	<a href="addItem.html" id="addNew" style="display:none;">Add New Item</a>
+	    </nav>
+	    <form action="#" method="post" id="informationForm">	    
+	    	<fieldset id="informationFieldset"> 
+		    	<legend>Customer Information</legend>
+		    	<ul id="errors"></ul>		    	
+		    	<ul class="questions">
+			    	<li><label for="fname">First Name:</label><input type="text" id="fname" /></li>
+			    	<li><label for="lname">Last Name:</label><input type="text" id="lname" /></li>
+			    	<li><label for="email">Email:</label><input type="text" id="email" placeholder="Example@Email.com" /></li>
+			    	<li><label for="phone">Phone Number:</label><input type="text" id="phone" placeholder="123 123-4567" /></li>
+			    	<li><label for="address">Address:</label><input type="text" id="address" /></li>
+				</ul>
+				<aside>Order Type</aside>
+				<ul class="questions">					
+					<li><label for="carryOut">Carry-Out:  </label><input type="radio" checked value="Carryout" id="carryOut" name="order" /></li>
+					<li><label for="delivery">Delivery:  </label><input type="radio" value="Delivery" id="delivery" name="order" /></li>					
+				</ul>			
+    	<aside>Payment</aside>
+				<ul class="questions">
+					<li><label for="visa">Visa: </label><input type="checkbox" value="Visa" id="visa" name="payment" /></li>
+					<li><label for="masterCard">Master Card: </label><input type="checkbox" value="Mastercard" id="masterCard" name="payment" /></li>
+					<li><label for="cash">Cash:  </label><input type="checkbox" checked="" value="Cash" id="cash" name="payment" /></li>
+				</ul>
+	    	</fieldset>	    	
+	    	<fieldset>
+		    	<legend>Order Information</legend>
+		    	<ul class="questions">
+			    		<li id="select"><label for="menus">Choose A Menu:</label></li>			    	
+			    		<li><label for="amount">How Many Orders</label> <input type="range" min="1" max="5" id="amount" name="orderAmount" /><br /></li>			    	
+			    		<li><label for="date">Delivery date</label>	<input type="date"  min="2011-01-31" max="2013-01-31"  id="date" name="date" required 							aria-required="true" /></li>
+			    		<li><label for="time">Delivery Time</label> <input type="time" id="time" name="time" /></li>
+			    			    						    		
+			       	<li><label for="comments">Additional Instructions: </label> <textarea id="comments">Type answer here</textarea></li>
+			       	<li><input type="hidden" value="true" /></li>				       			       
+		    	 </ul>
+	    	</fieldset>
+	    	<input type="submit" value="Submit Order" id="submit" /><br />
+	    </form>
+	    <script src="JSON.js" type="text/javascript"></script>
+	    <script src="Main.js" type="text/javascript"></script>
+    </body>
+</html>
