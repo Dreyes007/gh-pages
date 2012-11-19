@@ -52,17 +52,17 @@ var json = {
 		"comments": ["Additional Instructions:", "Hi!:"]
 	},
 	"Order5": {
-		"fname": ["First Name:", "Pedro"],
-		"lname": ["Last name:", "Jalapeno"],
-		"email": ["Email:", "Inastick@gmail.com"],
-		"phone": ["Phone:", "123 456-1234"],
-		"address": ["Address:", "9999 Comedy Ave"],
-		"order": ["Order:", "Delivery"],
-		"payment": ["Payment:", "Visa"],
-		"select": ["Menus:", "Appetizer"],
-		"amount": ["Order Amount", "1"],
-		"date": ["Delivery date:", "2012-11-22"],
-		"comments": ["Additional Instructions:", "Hi!:"]
+		"fname": ["First Name:", "Kelly"],
+		"lname": ["Last name:", "Jo"],
+		"email": ["Email:", "Help@gmail.com"],
+		"phone": ["Phone:", "123 232-4343"],
+		"address": ["Address:", "7654 Idont St"],
+		"order": ["Order:", "Carry-out"],
+		"payment": ["Payment:", "Cash"],
+		"select": ["Menus:", "Entree"],
+		"amount": ["Order Amount", "2"],
+		"date": ["Delivery date:", "2012-12-22"],
+		"comments": ["Additional Instructions:", "ok!:"]
 	},
 	"Order6": {
 		"fname": ["First Name:", "Pedro"],
