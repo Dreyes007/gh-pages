@@ -171,7 +171,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			
 	}
 	
-	function editItem(){
+	function editItem(checkbox){
 		//Grab the data from our item on local storage
 		var value = localStorage.getItem(this.key);
 		var item = JSON.parse(value);
@@ -200,7 +200,7 @@ window.addEventListener("DOMContentLoaded", function(){
 				checkbox[i].setAttribute("checked", "checked");
 			}
 		}
-		$('select').value = item.select[1];
+		$('menus').value = item.select[1];
 		$('amount').value = item.select[1];
 		$('date').value = item.select[1];
 		$('time').value = item.select[1];
