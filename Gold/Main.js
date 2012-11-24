@@ -1,20 +1,20 @@
 // Daniel Reyes
-// VFW-1112
-// Project 4
+// MIU-1213
+// Gold app
 // Nov 15th
 
 //Wait untill DOM is ready.
 window.addEventListener("DOMContentLoaded", function(){
 
 	//getElementById function
-	function $(x){
+	function ge(x){
 		var theElement = document.getElementById(x);
 		return theElement;		
 	}
 		//Select field element populated with options
 	function chooseMenu(){
 		var formTag = document.getElementsByTagName("form"),
-			selectLi = $('select'),
+			selectLi = ge('select'),
 			makeSelect = document.createElement('select');
 			makeSelect.setAttribute("id", "menus");
 		for(var i=0, j=menuGroups.length; i<j; i++){
@@ -48,15 +48,15 @@ window.addEventListener("DOMContentLoaded", function(){
 	function toggleControls(n){
 		switch(n){
 			case "on":
-			$('informationForm').style.display = "none";
-			$('clear').style.display = "inline";	
-			$('addNew').style.display = "inline";	
+			ge('informationForm').style.display = "none";
+			ge('clear').style.display = "inline";	
+			ge('addNew').style.display = "inline";	
 			break;
 			case "off":
-			$('informationForm').style.display = "block";
-			$('clear').style.display = "inline";	
-			$('addNew').style.display = "none";
-			$('items').style.display = "none";	
+			ge('informationForm').style.display = "block";
+			ge('clear').style.display = "inline";	
+			ge('addNew').style.display = "none";
+			ge('items').style.display = "none";	
 			break;
 			default:
 			return false;
@@ -78,17 +78,17 @@ window.addEventListener("DOMContentLoaded", function(){
 		getSelectedRadio();
 		getSelectedCheckbox();
 		var item			= {};
-			item.fname		= ["First Name:", $('fname').value];
-			item.lname		= ["Last Name:", $('lname').value];	
-			item.email		= ["Email:", $('email').value];
-			item.phone		= ["Phone Number:", $('phone').value];
-			item.address	= ["Address:", $('address').value];
+			item.fname		= ["First Name:", ge('fname').value];
+			item.lname		= ["Last Name:", ge('lname').value];	
+			item.email		= ["Email:", ge('email').value];
+			item.phone		= ["Phone Number:", ge('phone').value];
+			item.address	= ["Address:", ge('address').value];
 			item.order		= ["Order:", orderValue];
 			item.payment	= ["Payment", paymentValue];
-			item.select 	= ["Menus:", $('menus').value];
-			item.amount 	= ["Order Amount:", $('amount').value];
-			item.date		= ["Delivery Date:", $('date').value];
-			item.comments	= ["Additional Instructions:", $('comments').value];
+			item.select 	= ["Menus:", ge('menus').value];
+			item.amount 	= ["Order Amount:", ge('amount').value];
+			item.date		= ["Delivery Date:", ge('date').value];
+			item.comments	= ["Additional Instructions:", ge('comments').value];
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Order Saved!");
 	}
@@ -180,11 +180,11 @@ window.addEventListener("DOMContentLoaded", function(){
 		toggleControls("off");
 			
 		//Populate form with with current local storage values.
-		$('fname').value = item.fname[1];
-		$('lname').value = item.lname[1];
-		$('email').value = item.email[1];
-		$('phone').value = item.phone[1];
-		$('address').value = item.address[1];
+		ge('fname').value = item.fname[1];
+		ge('lname').value = item.lname[1];
+		ge('email').value = item.email[1];
+		ge('phone').value = item.phone[1];
+		ge('address').value = item.address[1];
 		var radios = document.forms[0].order;
 		for(var i=0; i<radios.length; i++){
 			if(radios[i].value == "Carryout" && item.order[1] == "Carryout"){
@@ -200,17 +200,17 @@ window.addEventListener("DOMContentLoaded", function(){
 				checkbox[i].setAttribute("checked", "checked");
 			}
 		}
-		$('menus').value = item.select[1];
-		$('amount').value = item.select[1];
-		$('date').value = item.select[1];
-		$('time').value = item.select[1];
-		$('comments').value = item.select[1];
+		ge('menus').value = item.select[1];
+		ge('amount').value = item.select[1];
+		ge('date').value = item.select[1];
+		ge('time').value = item.select[1];
+		ge('comments').value = item.select[1];
 			
 		//Remove the initial listener from the input 'Save Order' button.
 		save.removeEventListener("click", storeData);
 		//Change Submit Button value to Edit Button
-		$('submit').value = "Edit Information";
-		var editSubmit = $('submit');
+		ge('submit').value = "Edit Information";
+		var editSubmit = ge('submit');
 		//Save the key value establish in this function as a property of the edit submit event
 		//so we can use that value when the edited data is saved.
 		editSubmit.addEventListener("click", validate);
@@ -244,10 +244,10 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	function validate(e){
 		//Define the elements we want to check
-		var getfname = $('fname');
-		var getlname = $('lname');
-		var getEmail = $('email');
-		var getPhone = $('phone');
+		var getfname = ge('fname');
+		var getlname = ge('lname');
+		var getEmail = ge('email');
+		var getPhone = ge('phone');
 		
 		//Reset Error Message.
 		errMsg.innerHTML = "";
@@ -308,7 +308,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	var menuGroups = ["--Choose A Menu--", "Appetizer", "Entree", "Dessert"],
 		orderValue,
 		paymentValue,
-		errMsg = $('errors');
+		errMsg = ge('errors');
 					
 	chooseMenu();
 	
@@ -316,11 +316,11 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	//Set link & Submit Click Events
 	
-	var displayLink = $('displayLink');
+	var displayLink = ge('displayLink');
 	displayLink.addEventListener("click", getData);
-	var clearLink = $('clear');
+	var clearLink = ge('clear');
 	clearLink.addEventListener("click", clearLocal);
-	var save = $('submit');
+	var save = ge('submit');
 	save.addEventListener("click", validate);
 
 });
