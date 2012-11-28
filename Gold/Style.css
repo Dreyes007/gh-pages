@@ -85,6 +85,24 @@ a:Visited{color: gray;}
 a:hover{color: red;}
 a:active{color: black;}
 
+.image
+{
+position:absolute;
+left:200px;
+top:125px;
+z-index: -1;
+}
+
+h3{
+	position: relative;
+	top: 500px;
+	left: 10px;
+	width: 100%;
+	font-family: sans-serif
+	font-size: x-large;
+	color: #ffffff;
+		
+}
 
 
 
