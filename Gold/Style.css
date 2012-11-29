@@ -98,12 +98,21 @@ h3{
 	top: 500px;
 	left: 10px;
 	width: 100%;
-	font-family: sans-serif
-	font-size: x-large;
-	color: #ffffff;
-		
+	font-family: sans-serif;
+	color: #ffffff;		
 }
-
+.search{
+	position: absolute;
+	top: 90px;
+	left: 888px;
+	width: 100%;
+}
+.search1{
+	position: absolute;
+	top: 90px;
+	left: 873px;
+	width: 100%;
+}
 
 
 
