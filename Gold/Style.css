@@ -88,7 +88,7 @@ a:active{color: black;}
 .image
 {
 position:absolute;
-left:200px;
+left:250px;
 top:125px;
 z-index: -1;
 }
@@ -113,6 +113,7 @@ h3{
 	left: 873px;
 	width: 100%;
 }
+
 
 
 
