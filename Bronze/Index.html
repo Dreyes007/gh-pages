@@ -1,45 +1,127 @@
 <!DOCTYPE html>
 <!-- Daniel Reyes-->
 <!-- MIU-1212-->
-<!-- Project-1-->
+<!-- Project-2-->
 
-<!-- HTML TAG -->
-<html>
-	<!-- Document Head -->
-	<head>
-        <meta charset="UTF-8"/>
-        <meta name="description" content="My first HTML of Visual Frameworks class" />
-        <meta name="keywords" content="html5, mobile development, full sail" />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="user-scalable=no, width=device-width" />
-        <meta name="viewport" content="target-desintydpi=device-dpi" />
-        <meta name="HandheldFriendly" content="true">
-        <meta name="MobileOptimize" content="320"/>
-        <link rel="stylesheet" href="Style.css" type="text/css" />        
-        <title>Mobile Menu</title>                                     
-    </head>
-    <body>
-	    <header>
-		    <h1>Mobile Menu</h1>
-		    <h2>Orders on the go.</h2>
-		</header>
-		<article>
-			<p>This App lets the guest place an order right from their mobile device making it very easy and convenient to order food.</p>
-		</article>
-		<div class="image">
-			<h3>Place Your Order Now</h3>		
-				<a href="addItem.html">
-				<img src="images/Feature.jpg" alt="salad" width="410" height="290">
-				</a>
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Mobile Menu</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="demo/css/style.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	
+	
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+
+	<div data-role="page" id="home">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Mobile Menu</h1>
 		</div>
-		<div class="search">	
-			<form action="searchBar">
-			Search: <input type="search" name="search"><br>
-			<input type="submit">
-			</form>
+				
+		<div>
+			<img src="images/Feature.jpg" data-fullscreen="true" height="100" width="80">
 		</div>
-		<a href="addItem.html" class="appetizers">Appetizers</a>
-		<a href="addItem.html" class="entree">Entrees</a>
-		<a href="addItem.html" class="dessert">Desserts</a>			
-	</body>
+		
+		<div>
+			<a href="index.html" data-role="button" data-theme="b" data-icon="arrow-r">Place Your Order</a> 
+		</div>
+		<div data-role="content">
+			<div data-role="controlgroup">
+			<a href="#names" data-role="button" data-theme="a">Browse Names</a>
+			<a href="#orders" data-role="button"data-theme="a">Browse Orders</a>
+			<a href="#menus" data-role="button"data-theme="a">Browse Menus</a>
+			</div>						
+		</div> 
+		<div>
+			<input type="search" name="search-mini" id="search-mini" value="" data-mini="true" placeholder="Search"/>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="content">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">HOME</a></li>
+					<li><a href="#search" data-icon="star">ABOUT</a></li>
+				</ul>
+			</div>
+			
+		</div>
+	
+	
+	</div>
+	
+	<div data-role="page" id="names" data-add-back-btn="true">
+		<div data-role="header">
+			<h1>Names</h1>
+		</div>
+			<h3><a href="JSON.js">First Name</a></h3>
+			<h3><a href="JSON.js">Last  Name</a></h3>
+		<div data-role="footer" data-position="fixed" data-id="content">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">HOME</a></li>
+					<li><a href="#search" data-icon="star">ABOUT</a></li>
+				</ul>
+			</div>
+			
+		</div>
+		
+	</div>
+	<div data-role="page" id="orders" data-add-back-btn="true">
+		<div data-role="header">
+			<h1>Orders</h1>
+		</div>
+			<h3><a href="JSON.js">Delivery</a></h3>
+			<h3><a href="JSON.js">Carry-Out</a></h3>
+		<div data-role="footer" data-position="fixed" data-id="content">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">HOME</a></li>
+					<li><a href="#search" data-icon="star">ABOUT</a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+	<div data-role="page" id="menus" data-add-back-btn="true">
+			<div data-role="header">
+		<h1>Menus</h1>
+		</div>
+			<h3><a href="JSON.js">Appetizers</a></h3>
+			<h3><a href="JSON.js">Entree</a></h3>
+			<h3><a href="JSON.js">Dessert</a></h3>
+		<div data-role="footer" data-position="fixed" data-id="content">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">HOME</a></li>
+					<li><a href="#search" data-icon="star">ABOUT</a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+	
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
 </html>

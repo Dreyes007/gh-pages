@@ -1,65 +1,94 @@
 <!DOCTYPE html>
 <!-- Daniel Reyes-->
 <!-- MIU-1212-->
-<!-- Project-1-->
+<!-- Project-2-->
 
-<!-- HTML TAG -->
+<!doctype html>  
 <html lang="en">
-	<!-- Document Head -->
-	<head>
-	
-        <meta charset="UTF-8"/>
+<head>
 
-        <title>Mobile Menu</title> 
-      
-        <!--  Mobile viewport optimized: j.mp/bplateviewport -->
-		<meta name="HandheldFriendly" content="True">
-		<meta name="MobileOptimized" content="320"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<!-- Mobile IE needs ClearType for smoothing fonts -->
-		<meta http-equiv="cleartype" content="on"> 
-		<!-- StyleSheets under here -->
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-		<link rel="stylesheet" href="style.css" />
-		<link rel="stylesheet" href="Style.css" type="text/css" />  
-		
-		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
-		<script src="js/libs/modernizr.custom.min.js"></script> 
-                                  
-    </head>
-    <body>
-	    <header>
-		    <h1>Mobile Menu</h1>
-		    <h2>Orders on the go.</h2>
-		</header>
-		<article>
-			<p>This App lets the guest place an order right from their mobile device making it very easy and convenient to order food.</p>
-		</article>
-		<div class="image">
-			<h3>Place Your Order Now</h3>		
-				<a href="addItem.html">
-				<img src="images/Feature.jpg" alt="salad" width="710" height="490">
-				</a>
+	<meta charset="utf-8">
+	
+	<title>Mobile Menu</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="demo/css/style.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	
+	
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+
+	<div data-role="page" id="home">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Mobile Menu</h1>
 		</div>
-		<div class="search">	
-			<form action="searchBar">
-				Search: <input type="search" name="search">
-				<input type="submit">
-				</form>
+		
+		<div>
+			<input type="search" name="search-mini" id="search-mini" value="" data-mini="true" placeholder="Search"/>
 		</div>
-			<a href="addItem.html">
-				<h3 class="appetizer" style="color: #FF441A; left:25px; top:10px;">Appetizers:</h3>
-			</a>
-			<a href="addItem.html">
-				<h3 class="entree" style="color: #FF441A; left:25px; top: 30px;">Entrees:</h3>
-			</a>
-			<a href="addItem.html">
-				<h3 class="dessert" style="color: #FF441A; left:25px; top:50px;">Desserts:</h3>
-			</a>
-				<!-- JavaScript under here -->
-		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-		<script type="text/javascript" src="main.js"></script>						
-	</body>
+
+		
+		<div data-role="content">
+			<ul data-role="listview">
+				<li>
+				<img src="images/Feature.jpg" data-fullscreen="false">				
+				<h2><a href="addItem.html" data-ajax="false">Place Your Order Now</a></h2>
+				<p>Guaranteed to satisfy your belly!</p>
+				</li>
+			</ul>
+		</div>
+		<div data-role="collapsible-set" data-collapsed-icon="arrow-r">
+			<div data-role="collapsible" data-collapsed="true">
+			<h3 >Browse Names</h3>
+			<p><a href="JSON.js">First Names:</a></p>
+			<p><a href="JSON.js">Last Names:</a></p>
+			</div>
+			
+			<div data-role="collapsible">
+			<h3 >Browse Orders</h3>
+			<p><a href="JSON.js">Delivery:</a></p>
+			<p><a href="JSON.js">Carry-Out:</a></p>
+			</div>
+			
+			<div data-role="collapsible">
+			<h3 >Browse Menus</h3>
+			<p><a href="JSON.js">Appetizers:</a></p>
+			<p><a href="JSON.js">Entrees:</a></p>
+			<p><a href="JSON.js">Desserts:</a></p>
+			</div>
+					
+		</div> 
+		
+		<div data-role="footer" data-position="fixed" data-id="content">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">HOME</a></li>
+					<li><a href="#search" data-icon="star">ABOUT</a></li>
+				</ul>
+			</div>
+			
+		</div>
+	
+	
+	</div>
+	
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
 </html>
