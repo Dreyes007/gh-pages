@@ -122,16 +122,15 @@
 		
 	</div>
 	
-	<div data-role="page" id="personalInfo" data-add-back-btn="true">
-		
-		<div data-role="header" data-position="fixed">
-			<h1>Personal Info</h1>
-		</div>
 	
-		<div data-role="content">
+		<div data-role="page" id="personalInfo" data-add-back-btn="true">
 		
-			<form action="" method="post" id="recordInfo">
-			
+			<div data-role="header" data-position="fixed">
+				<h1>Personal Info</h1>
+			</div>
+	
+			<div data-role="content">
+							
 				<div data-role="fieldcontain">
 					<label for="firstName">First Name:</label>
 					<input type="text" name="firstName" id="firstName" value="" data-mini="true"/>
@@ -158,27 +157,48 @@
 					<textarea name="address" id="Address" value="" data-mini="true"></textarea>
 				</div>
 				
-				<fieldset class="ui-grid-a">
-					<div class="ui-block-a"><button type="submit" data-theme"b">Next</button></div>
-					<div class="ui-block-b"><button type="reset">Clear Form</button></div>
-				</fieldset>
-				
-			</form>
+				<a href="#order" data-role="button" data-inline="true">Next</a>
+				<input type="reset" value="reset" data-inline="true" />
+							
+			</div>
 			
+			<div data-role="footer" data-position="fixed" data-id="content">
+				<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">HOME</a></li>
+					<li><a href="#about" data-icon="star">ABOUT</a></li>
+				</ul>
+				</div>			
+			</div>
 		</div>
 		
-	
-	
-		<div data-role="footer" data-position="fixed" data-id="content">
-			<div data-role="navbar">
-			<ul>
-				<li><a href="#home" data-icon="home">HOME</a></li>
-				<li><a href="#about" data-icon="star">ABOUT</a></li>
-			</ul>
-			</div>			
+		<div data-role="page" id="order" data-add-back-btn="true">
+			
+			<div data-role="header" data-position="fixed">
+				<h1>Order</h1>
+			</div>
+									
+				<div data-role="fieldcontain">
+					<label for="menu" class="select">Menu:</label>
+						<select name="menu" id="menu">
+						<option value="appetizes">Appetizers</option>
+						<option value="entree">Entree</option>
+						<option value="dessert">Dessert</option>
+						<option value="drinks">Drinks</option>
+						<option value="kid menu">Kids Menu</option>
+						</select>
+				</div>
+																		
+			<div data-role="footer" data-position="fixed" data-id="content">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">HOME</a></li>
+						<li><a href="#about" data-icon="star">ABOUT</a></li>
+					</ul>
+				</div>			
+			</div>
 		</div>
-	</div>
-	
+		
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
