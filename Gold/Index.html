@@ -15,6 +15,7 @@
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/themes/my-custom-theme.css" />
 	
 	<!-- Mobile IE needs ClearType for smoothing fonts -->
 	<meta http-equiv="cleartype" content="on">
@@ -46,46 +47,136 @@
 			<ul data-role="listview">
 				<li>
 				<img src="images/Feature.jpg" data-fullscreen="false">				
-				<h2><a href="addItem.html" data-ajax="false">Place Your Order Now</a></h2>
+				<h2><a href="#personalInfo">Place Your Order Now</a></h2>
 				<p>Guaranteed to satisfy your belly!</p>
 				</li>
 			</ul>
 		</div>
 		<div data-role="collapsible-set" data-collapsed-icon="arrow-r">
 			<div data-role="collapsible" data-collapsed="true">
-				<h3 >Browse Names</h3>
-				<div data-role"controlgroup">
+				<h3 >Browse Appetizers</h3>
+					<div data-role"controlgroup">
+						<a href="JSON.js" data-role="button">First Names:</a>
+						<a href="JSON.js" data-role="button">Last Names:</a>
+					</div>
+			</div>
+			
+			<div data-role="collapsible">
+				<h3 >Browse Entrees</h3>
 					<a href="JSON.js" data-role="button">First Names:</a>
 					<a href="JSON.js" data-role="button">Last Names:</a>
-				</div>
 			</div>
 			
 			<div data-role="collapsible">
-			<h3 >Browse Orders</h3>
-			<a href="JSON.js"data-role="button">Delivery:</a>
-			<a href="JSON.js"data-role="button">Carry-Out:</a>
+				<h3 >Browse Desserts</h3>
+					<a href="JSON.js" data-role="button">Appetizers:</a>
+					<a href="JSON.js" data-role="button">Entrees:</a>
+					<a href="JSON.js" data-role="button">Desserts:</a>
 			</div>
 			
 			<div data-role="collapsible">
-			<h3 >Browse Menus</h3>
-			<a href="JSON.js"data-role="button">Appetizers:</a>
-			<a href="JSON.js"data-role="button">Entrees:</a>
-			<a href="JSON.js"data-role="button">Desserts:</a>
+				<h3 >Browse Drinks</h3>
+					<a href="JSON.js" data-role="button">First Names:</a>
+					<a href="JSON.js" data-role="button">Last Names:</a>
 			</div>
-					
+			
+			<div data-role="collapsible">
+				<h3 >Browse Kids Menu</h3>
+					<a href="JSON.js" data-role="button">First Names:</a>
+					<a href="JSON.js" data-role="button">Last Names:</a>
+			</div>
+								
 		</div> 
 		
 		<div data-role="footer" data-position="fixed" data-id="content">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#home" data-icon="home">HOME</a></li>
-					<li><a href="#search" data-icon="star">ABOUT</a></li>
+					<li><a href="#about" data-icon="star">ABOUT</a></li>
 				</ul>
 			</div>
 			
 		</div>
 	
 	
+	</div>
+	
+	<div data-role="page" id="about" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1> About Mobile Menu</h1>
+		</div>
+		<div data-role="content">
+			<h3>This app will conveniently let you place an order from our scrumptious menu, right from your mobile device.</h3>
+			<h3>We hope you enjoy.</h3>			 
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="content">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">HOME</a></li>
+					<li><a href="#about" data-icon="star">ABOUT</a></li>
+				</ul>
+			</div>			
+		</div>
+		
+	</div>
+	
+	<div data-role="page" id="personalInfo" data-add-back-btn="true">
+		
+		<div data-role="header" data-position="fixed">
+			<h1>Personal Info</h1>
+		</div>
+	
+		<div data-role="content">
+		
+			<form action="" method="post" id="recordInfo">
+			
+				<div data-role="fieldcontain">
+					<label for="firstName">First Name:</label>
+					<input type="text" name="firstName" id="firstName" value="" data-mini="true"/>
+				</div>
+				
+				<div data-role="fieldcontain">
+					<label for="lastName">Last Name:</label>
+					<input type="text" name="lastName" id="lastName" value="" data-mini="true"/>
+				</div>
+				
+				<div data-role="fieldcontain">
+					<label for="email">Email:</label>
+					<input type="email" name="email" id="email" value="" placeholder="abc123@email.com" data-mini="true"/>
+				</div>
+				
+				<div data-role="fieldcontain">
+					<label for="phone">Phone:</label>
+					<input type="tel" name="phone" id="phone" value="" placeholder="123 456-7890" data-mini="true"/>
+				</div>
+				
+				
+				<div data-role="fieldcontain">
+					<label for="Address">Address:</label>
+					<textarea name="address" id="Address" value="" data-mini="true"></textarea>
+				</div>
+				
+				<fieldset class="ui-grid-a">
+					<div class="ui-block-a"><button type="submit" data-theme"b">Next</button></div>
+					<div class="ui-block-b"><button type="reset">Clear Form</button></div>
+				</fieldset>
+				
+			</form>
+			
+		</div>
+		
+	
+	
+		<div data-role="footer" data-position="fixed" data-id="content">
+			<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home">HOME</a></li>
+				<li><a href="#about" data-icon="star">ABOUT</a></li>
+			</ul>
+			</div>			
+		</div>
 	</div>
 	
 	<!-- JavaScript under here -->
