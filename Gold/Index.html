@@ -21,7 +21,7 @@
 	<meta http-equiv="cleartype" content="on">
 	
 	<!-- StyleSheets under here -->
-	<link rel="stylesheet" href="demo/css/style.css" />
+	<link rel="stylesheet" href="Css/style.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	
 	
@@ -130,45 +130,48 @@
 			</div>
 	
 			<div data-role="content">
-							
-				<div data-role="fieldcontain">
-					<label for="firstName">First Name:</label>
-					<input type="text" name="firstName" id="firstName" value="" data-mini="true"/>
-				</div>
-				
-				<div data-role="fieldcontain">
-					<label for="lastName">Last Name:</label>
-					<input type="text" name="lastName" id="lastName" value="" data-mini="true"/>
-				</div>
-				
-				<div data-role="fieldcontain">
-					<label for="email">Email:</label>
-					<input type="email" name="email" id="email" value="" placeholder="abc123@email.com" data-mini="true"/>
-				</div>
-				
-				<div data-role="fieldcontain">
-					<label for="phone">Phone:</label>
-					<input type="tel" name="phone" id="phone" value="" placeholder="123 456-7890" data-mini="true"/>
-				</div>
-				
-				
-				<div data-role="fieldcontain">
-					<label for="Address">Address:</label>
-					<textarea name="address" id="Address" value="" data-mini="true"></textarea>
-				</div>
-				
-				<a href="#order" data-role="button" data-inline="true">Next</a>
-				<input type="reset" value="reset" data-inline="true" />
-							
-			</div>
 			
-			<div data-role="footer" data-position="fixed" data-id="content">
-				<div data-role="navbar">
-				<ul>
-					<li><a href="#home" data-icon="home">HOME</a></li>
-					<li><a href="#about" data-icon="star">ABOUT</a></li>
-				</ul>
-				</div>			
+				<form action="" method="post" id="placeorder">
+							
+					<div data-role="fieldcontain">
+						<label for="firstName">First Name:</label>
+						<input type="text" name="firstName" id="firstName" value="" data-mini="true"/>
+					</div>
+					
+					<div data-role="fieldcontain">
+						<label for="lastName">Last Name:</label>
+						<input type="text" name="lastName" id="lastName" value="" data-mini="true"/>
+					</div>
+					
+					<div data-role="fieldcontain">
+						<label for="email">Email:</label>
+						<input type="email" name="email" id="email" value="" placeholder="abc123@email.com" data-mini="true"/>
+					</div>
+					
+					<div data-role="fieldcontain">
+						<label for="phone">Phone:</label>
+						<input type="tel" name="phone" id="phone" value="" placeholder="123 456-7890" data-mini="true"/>
+					</div>
+					
+					
+					<div data-role="fieldcontain">
+						<label for="Address">Address:</label>
+						<textarea name="address" id="Address" value="" data-mini="true"></textarea>
+					</div>
+					
+					<a href="#order" data-role="button" data-inline="true">Next</a>
+					<input type="reset" value="reset" data-inline="true" />
+							
+				</form>
+			
+				<div data-role="footer" data-position="fixed" data-id="content">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home" data-icon="home">HOME</a></li>
+							<li><a href="#about" data-icon="star">ABOUT</a></li>
+						</ul>
+					</div>			
+				</div>
 			</div>
 		</div>
 		
@@ -211,10 +214,10 @@
 				</div>
 				
 				<div data-role="fieldcontain">
-					<fieldset data-role="controlgroup" data-type="horizontal">
+					<fieldset data-role="controlgroup" name="date" data-type="horizontal" data-mini="true">
 						<legend>Date:</legend>
 											
-					<select name="month" id="month">
+					<select name="date" id="month">
 						<option>Month</option>
 						<option value="Jan">January</option>
 						<option value="Feb">February</option>
@@ -230,7 +233,7 @@
 						<option value="Dec">December</option>
 					</select>
 					
-					<select name="day" id="day">
+					<select name="date" id="day">
 						<option>Day</option>
 						<option value="Mon">Monday</option>
 						<option value="Tue">Tuesday</option>
@@ -241,7 +244,7 @@
 						<option value="Sun">Sunday</option>
 					</select>
 					
-					<select name="time" id="time">
+					<select name="date" id="time">
 						<option>Time</option>
 						<option value="11am">11:00 am</option>
 						<option value="12pm">12:00 pm</option>
@@ -261,7 +264,7 @@
 					</fieldset>																	
 				</div>
 				
-					<fieldset data-role="controlgroup" data-mini="true">
+					<fieldset data-role="controlgroup" name="payment" data-mini="true">
 						<input type="radio" name="payment" id="visa" value="choice-1" checked="checked" />
 						<label for="visa">Visa</label>
 						
@@ -285,8 +288,25 @@
 					</ul>
 				</div>			
 			</div>
+			
+				<a href="#ordererror" id="odererrorlink" data-rel="dialog" data-transition="pop">Open Errors</a>
+			
 				</form>
 			</div>
+		</div>
+		
+		<div data-role="dialog" id="ordererror">
+			
+			<div data-role="header" data-position="fixed">
+				<h1>Missing Fields!</h1>
+			</div>
+			
+			<div data-role="content">
+				<ul>
+					<li>Test.</li>
+				</ul>				
+			</div>
+			
 		</div>
 		
 	<!-- JavaScript under here -->
