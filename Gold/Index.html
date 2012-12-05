@@ -196,6 +196,17 @@
 				</div>
 				
 				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+						<legend>Order Type</legend>
+							<input type="radio" name="ordertype" id="takeout" value="choice-1" checked="checked" />
+							<label for="takeout">Take Out</label>
+							
+							<input type="radio" name="ordertype" id="delivery" value="choice-2" />
+							<label for="delivery">Delivery</label>
+					</fieldset>					
+				</div>
+				
+				<div data-role="fieldcontain">
 					<fieldset data-role="controlgroup" data-type="horizontal">
 						<legend>Date:</legend>
 											
@@ -244,6 +255,22 @@
 					</select>
 										
 					</fieldset>																	
+				</div>
+				
+					<fieldset data-role="controlgroup" data-mini="true">
+						<input type="radio" name="payment" id="visa" value="choice-1" checked="checked" />
+						<label for="visa">Visa</label>
+						
+						<input type="radio" name="payment" id="mastercard" value="choice-2" />
+						<label for="mastercard">Master Card</label>
+						
+						<input type="radio" name="payment" id="cash" value="choice-3" />
+						<label for="cash">Cash</label>					
+					</fieldset>		
+					
+				<div data-role="fieldcontain" data-mini="true">
+					<input type="submit" value="Submit Order" data-inline="true" />
+					<input type="reset" value="Reset Order" data-inline="true" />
 				</div>
 																		
 			<div data-role="footer" data-position="fixed" data-id="content">
