@@ -15,7 +15,7 @@
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/themes/my-custom-theme.css" />
+	
 	
 	<!-- Mobile IE needs ClearType for smoothing fonts -->
 	<meta http-equiv="cleartype" content="on">
@@ -135,22 +135,22 @@
 							
 					<div data-role="fieldcontain">
 						<label for="firstName">First Name:</label>
-						<input type="text" name="firstName" id="firstName" value="" data-mini="true"/>
+						<input type="text" name="firstName" id="firstName" value="" data-mini="true" class="required" />
 					</div>
 					
 					<div data-role="fieldcontain">
 						<label for="lastName">Last Name:</label>
-						<input type="text" name="lastName" id="lastName" value="" data-mini="true"/>
+						<input type="text" name="lastName" id="lastName" value="" data-mini="true" class="required" />
 					</div>
 					
 					<div data-role="fieldcontain">
 						<label for="email">Email:</label>
-						<input type="email" name="email" id="email" value="" placeholder="abc123@email.com" data-mini="true"/>
+						<input type="email" name="email" id="email" value="" placeholder="abc123@email.com" data-mini="true" class="required email" />
 					</div>
 					
 					<div data-role="fieldcontain">
 						<label for="phone">Phone:</label>
-						<input type="tel" name="phone" id="phone" value="" placeholder="123 456-7890" data-mini="true"/>
+						<input type="tel" name="phone" id="phone" value="" placeholder="123 456-7890" data-mini="true" class="required number" />
 					</div>
 					
 					
@@ -187,7 +187,7 @@
 									
 				<div data-role="fieldcontain">
 					<label for="menu" class="select">Menu:</label>
-						<select name="menu" id="menu">
+						<select name="menu" id="menu" class="required">
 							<option data-placeholder="true">Please Select One</option>							
 								<option value="appetizes">Appetizers</option>
 								<option value="entree">Entree</option>
@@ -214,7 +214,7 @@
 				</div>
 				
 				<div data-role="fieldcontain">
-					<fieldset data-role="controlgroup" name="date" data-type="horizontal" data-mini="true">
+					<fieldset data-role="controlgroup" name="date" data-type="horizontal" data-mini="true" class="required">
 						<legend>Date:</legend>
 											
 					<select name="date" id="month">
@@ -264,7 +264,7 @@
 					</fieldset>																	
 				</div>
 				
-					<fieldset data-role="controlgroup" name="payment" data-mini="true">
+					<fieldset data-role="controlgroup" name="payment" data-mini="true" class="required">
 						<input type="radio" name="payment" id="visa" value="choice-1" checked="checked" />
 						<label for="visa">Visa</label>
 						
@@ -312,6 +312,7 @@
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/Main.js"></script>
 </body>
 </html>
