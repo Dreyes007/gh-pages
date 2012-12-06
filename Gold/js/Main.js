@@ -9,7 +9,7 @@ var parseplaceorder = function(data){
 $(document).on('pageinit', function(){
 	
 	var oform = $('#placeorder')
-		odererrorlink = $('odererrorlink')
+		odererrorlink = $('#odererrorlink')
 	;
 	
 	oform.validate({
@@ -26,9 +26,38 @@ $(document).on('pageinit', function(){
 		},
 		submitHandler: function(){
 			var data = oform.serializeArray();
-			parseplaceorder(data);
+			storeData(data);
 		}
 	});
 	
 });
 
+//The functions below can go inside or outside the pageinit function for the page in which it is needed.
+
+var autofillData = function (){
+	 
+};
+
+var getData = function(){
+
+};
+
+var storeData = function(data){
+	
+}; 
+
+var	deleteItem = function (){
+			
+};
+					
+var clearLocal = function(){
+		if(localStorage.length === 0){
+			alert("There is no data to clear.");
+			
+		}else{
+			localStorage.clear();
+			alert("All information has been deleted!");
+			window.location.reload();
+			return false;
+		}
+};
